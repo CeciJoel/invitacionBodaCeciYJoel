@@ -1,0 +1,709 @@
+body {
+    background-image: url('Fotos/Fondo4.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#flipbook {
+    width: 900px;
+    height: 600px;
+} 
+
+#flipbook .page,
+#flipbook .hard {
+    width: 450px !important;
+    height: 600px !important;
+    min-width: 450px !important;
+    min-height: 600px !important;
+    max-width: 450px !important;
+    max-height: 600px !important;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px 30px 30px 30px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #F8F8FF;
+    margin: 0;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18), inset 0 0 10px #d1c7b7;
+}
+
+/* Efecto portada dura */
+#flipbook .hard {
+    font-family: 'Parisienne', cursive;
+    background: #380000 !important;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    box-shadow: 0 8px 32px rgba(56,0,0,0.25), 0 4px 24px rgba(0,0,0,0.18), inset 0 0 30px #a97b50;
+}
+
+#flipbook .page, #contra_Portada{
+    background: white;
+    border: 2px solid #353839 !important;
+    margin: 0;
+}
+
+#flipbook #contra_Portada{
+    font-family: 'Playfair Display', serif !important;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+#flipbook .page h2{
+    margin: 0;
+}
+
+.nav-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.nav-btns button {
+    background: #2a0000;
+    color: #fff;
+    border-radius: 50%;
+    border-color: #000000;
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.nav-btns button:hover {
+    background: #530000;
+}
+
+#flipbook .page {
+    background: white;
+    background-image: url('Fotos/Marco.png');
+    background-size: 125% 115%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position: calc(50% + 2px) calc(50% - 4px);
+    font-size: 1.5rem;
+}
+
+#txt_Nombres_Portada {
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.contenido-pagina {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1rem 3.5rem 1rem 3.5rem; /* Ajusta según lo que necesites */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenido-pagina iframe {
+    width: 95%;
+    max-width: 100%;
+    height: 220px;
+    margin: 0;
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(56,0,0,0.10), 0 2px 8px rgba(0,0,0,0.10);
+    transition: box-shadow 0.3s;
+}
+
+.contenido-pagina iframe:focus,
+.contenido-pagina iframe:hover {
+    box-shadow: 0 8px 32px rgba(56,0,0,0.18), 0 4px 24px rgba(0,0,0,0.18);
+}
+
+/* Aplica solo a la lista de Código de Vestimenta */
+.contenido-pagina ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 auto;
+    max-width: 320px;
+    text-align: left;
+}
+
+.contenido-pagina ul li {
+    position: relative;
+    padding-left: 38px;
+    margin-bottom: 14px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Cuadritos de color personalizados */
+.contenido-pagina ul li:nth-child(1)::before { /* Blanco */
+    background: #fff;
+    border: 2px solid #353839;
+}
+.contenido-pagina ul li:nth-child(2)::before { /* Rojo */
+    background: #c0392b;
+    border: 2px solid #353839;
+}
+.contenido-pagina ul li:nth-child(3)::before { /* Beige */
+    background: #f5f5dc;
+    border: 2px solid #353839;
+}
+.contenido-pagina ul li:nth-child(4)::before { /* Rosa Palo */
+    background: #eac7c7;
+    border: 2px solid #353839;
+}
+.contenido-pagina ul li:nth-child(5)::before { /* Vino */
+    background: #7b1f2b;
+    border: 2px solid #353839;
+}
+
+.contenido-pagina ul li::before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    margin-right: 12px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    box-shadow: 0 2px 6px #0001;
+    vertical-align: middle;
+}
+
+.btn-mesa-regalos {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #760000, #460000 100%);
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 14px 28px;
+    border-radius: 32px;
+    box-shadow: 0 4px 18px rgba(56,0,0,0.10), 0 2px 8px rgba(0,0,0,0.10);
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.btn-mesa-regalos:hover, .btn-mesa-regalos:focus {
+    background: linear-gradient(90deg, #460000 0%, #760000 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+    text-decoration: none;
+}
+
+.btn-mesa-regalos svg {
+    transition: transform 0.2s;
+}
+
+.btn-mesa-regalos:hover svg, .btn-mesa-regalos:focus svg {
+    transform: translateX(4px) scale(1.1);
+}
+
+.btn-album-recuerdos {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #760000 0%, #a9003a 100%);
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.18rem;
+    font-weight: bold;
+    padding: 14px 28px;
+    border-radius: 32px;
+    box-shadow: 0 4px 18px rgba(56,0,0,0.10), 0 2px 8px rgba(0,0,0,0.10);
+    text-decoration: none;
+    margin-top: 24px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    gap: 8px;
+}
+
+.btn-album-recuerdos:hover, .btn-album-recuerdos:focus {
+    background: linear-gradient(90deg, #a9003a 0%, #760000 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(56,0,0,0.18), 0 4px 24px rgba(0,0,0,0.18);
+    text-decoration: none;
+}
+
+.btn-album-recuerdos svg {
+    transition: transform 0.2s, filter 0.2s;
+    filter: drop-shadow(0 1px 2px #0002);
+}
+
+.btn-album-recuerdos:hover svg, .btn-album-recuerdos:focus svg {
+    transform: scale(1.13) rotate(-6deg);
+    filter: drop-shadow(0 2px 4px #0003);
+}
+
+.fotos-bebes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.foto-bebe {
+    width: 8.5rem;
+    height: 8.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+
+.foto-bebe img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-confirmar-asistencia {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #760000 0%, #a9003a 100%);
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.18rem;
+    font-weight: bold;
+    padding: 14px 28px;
+    border-radius: 32px;
+    box-shadow: 0 4px 18px rgba(56,0,0,0.10), 0 2px 8px rgba(0,0,0,0.10);
+    text-decoration: none;
+    margin-top: 24px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    gap: 8px;
+}
+
+.btn-confirmar-asistencia:hover, .btn-confirmar-asistencia:focus {
+    background: linear-gradient(90deg, #a9003a 0%, #760000 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(56,0,0,0.18), 0 4px 24px rgba(0,0,0,0.18);
+    text-decoration: none;
+}
+
+.btn-confirmar-asistencia svg {
+    transition: transform 0.2s, filter 0.2s;
+    filter: drop-shadow(0 1px 2px #0002);
+}
+
+.btn-confirmar-asistencia:hover svg, .btn-confirmar-asistencia:focus svg {
+    transform: scale(1.13) rotate(-6deg);
+    filter: drop-shadow(0 2px 4px #0003);
+}
+
+#container,
+.nav-btns {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+#container.visible,
+.nav-btns.visible {
+    opacity: 1;
+}
+
+@media (max-width: 900px) {
+    #container {
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    #flipbook {
+        width: 90vw !important;
+        height: 75vh !important;
+        min-width: 90vw !important;
+        min-height: 75vh !important;
+        max-width: 90vw !important;
+        max-height: 75vh !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-55%, -65%);
+    }
+    #flipbook .page, #flipbook .hard {
+        width: 90vw !important;
+        height: 75vh !important;
+        min-width: 90vw !important;
+        min-height: 75vh !important;
+        max-width: 90vw !important;
+        max-height: 75vh !important;
+        font-size: 2.8vw; /* Tamaño de letra relativo al ancho de pantalla */
+        border-radius: 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #flipbook .hard {
+        font-size: 9vw; /* Portada más grande */
+    }
+
+    #flipbook .page {
+        font-size: 5vw; /* Portada más grande */
+    }
+
+    .nav-btns {
+        display: none !important;
+    }
+
+    #flipbook .page {
+        background: white;
+        background-image: url('Fotos/Marco.png');
+        background-size: 125% 115%;
+        background-repeat: no-repeat;
+        background-position: calc(50% + 4px) calc(50% - 4px);
+    }
+
+    #txt_Nombres_Portada {
+        font-size: 3.5rem;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .btn-mesa-regalos:hover,
+    .btn-mesa-regalos:focus,
+    .btn-album-recuerdos:hover,
+    .btn-album-recuerdos:focus,
+    .btn-confirmar-asistencia:hover,
+    .btn-confirmar-asistencia:focus {
+        background: linear-gradient(90deg, #760000 0%, #a9003a 100%) !important;
+        color: #fff !important;
+        transform: none !important;
+        box-shadow: 0 4px 18px rgba(56,0,0,0.10), 0 2px 8px rgba(0,0,0,0.10) !important;
+        text-decoration: none !important;
+    }
+    .btn-mesa-regalos:hover svg,
+    .btn-mesa-regalos:focus svg,
+    .btn-album-recuerdos:hover svg,
+    .btn-album-recuerdos:focus svg,
+    .btn-confirmar-asistencia:hover svg,
+    .btn-confirmar-asistencia:focus svg {
+        transform: none !important;
+        filter: drop-shadow(0 1px 2px #0002) !important;
+    }
+    
+    svg {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+.cuenta-aportacion {
+    max-width: 100%;
+    text-align: center;
+}
+
+.cuenta-aportacion h2 {
+    font-family: 'Playfair Display', serif;
+    color: #760000;
+    font-size: 2rem;
+}
+
+.cuenta-tarjeta {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(56,0,0,0.10), 0 2px 8px rgba(0,0,0,0.10);
+    padding: 28px 22px 18px 22px;
+    border: 2px solid #a9003a22;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.cuenta-dato {
+    font-size: 1.1rem;
+    color: #2a0000;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.cuenta-label {
+    font-weight: bold;
+    color: #a9003a;
+    min-width: 1rem;
+}
+
+.cuenta-numero .cuenta-valor {
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    font-size: 1.18rem;
+    letter-spacing: 2px;
+    background: #f8f8ff;
+    border-radius: 8px;
+    margin-right: 10px;
+    color: #760000;
+}
+
+.btn-copiar-cuenta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(90deg, #760000 0%, #a9003a 100%);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    margin-left: 8px;
+    box-shadow: 0 2px 8px #0001;
+}
+.btn-copiar-cuenta:hover, .btn-copiar-cuenta:focus {
+    background: linear-gradient(90deg, #a9003a 0%, #760000 100%);
+    transform: scale(1.05);
+}
+.btn-copiar-cuenta svg {
+    vertical-align: middle;
+}
+
+.mensaje-copiado {
+    color: #fff;
+    background: #a9003a;
+    border-radius: 12px;
+    padding: 8px 18px;
+    margin: 10px;
+    font-size: 1.2rem;
+    display: inline-block;
+    animation: fadeInOut 2s;
+}
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@media (max-width: 900px) {
+    .cuenta-aportacion {
+        max-width: 100%;
+    }
+    .cuenta-tarjeta {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px 4vw 10px 4vw;
+        border-radius: 14px;
+        gap: 0.7rem;
+    }
+    .cuenta-label {
+        min-width: 0;
+        font-size: 1rem;
+        word-break: break-word;
+    }
+    .cuenta-dato {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        font-size: 1rem;
+        width: 100%;
+    }
+    .cuenta-numero .cuenta-valor {
+        font-size: 1rem;
+        word-break: break-all;
+        padding: 4px 4px;
+        margin-right: 0;
+        display: inline-block;
+        max-width: 100%;
+    }
+    .btn-copiar-cuenta {
+        width: 100%;
+        justify-content: center;
+        margin: 0 0 10px 0;
+        font-size: 1.5rem;
+        padding: 10px 0;
+    }
+}
+
+h3{
+    margin: 0;
+    padding: 0;
+}
+
+#fotoContraPortada {
+    width: 70%;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(56,0,0,0.10), 0 2px 8px rgba(0,0,0,0.10);
+    margin: 0;
+    padding: 0;
+}
+@media (max-height: 700px) {
+    .foto-bebe {
+        width: 6.5rem;
+        height: 6.5rem;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    }
+
+    .foto-bebe img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #qrCode{
+        width: 10.5rem;
+        height: 10.5rem;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 350px) and (max-height: 800px) and (max-height: 900px) {
+    .fotos-bebes{
+        gap: 10px;   
+    }
+
+    .foto-bebe {
+        width: 7.5rem;
+        height: 7.5rem;
+        border-radius: 50%;
+    }
+
+    .foto-bebe img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #qrCode{
+        width: 13.5rem;
+        height: 13.5rem;
+        max-width: 200px;
+    }
+}
+
+@media (max-height: 600px) {
+    #flipbook #contra_Portada{
+        font-family: 'Playfair Display', serif !important;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+    
+    .contenido-pagina {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 1rem 2rem 1rem 2rem; /* Ajusta según lo que necesites */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contenido-pagina iframe {
+        width: 95%;
+        max-width: 100%;
+        height: 120px;
+        margin: 0;
+        border: none;
+        border-radius: 18px;
+        box-shadow: 0 4px 18px rgba(56,0,0,0.10), 0 2px 8px rgba(0,0,0,0.10);
+        transition: box-shadow 0.3s;
+    }
+
+    .btn-copiar-cuenta {
+        width: 80%; 
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .mensaje-copiado {
+        height: 35px;
+        color: #fff;
+        background: #a9003a;
+        border-radius: 12px;
+        font-size: .9rem;
+        animation: fadeInOut 2s;
+    }
+
+    .cuenta-numero .cuenta-valor {
+        font-size: .8rem;
+    }
+
+    .cuenta-dato {
+        font-size: 1rem;
+        color: #2a0000;
+        display: flex;
+    }
+
+    .cuenta-label {
+        font-weight: bold;
+        color: #a9003a;
+        min-width: .5rem;
+    }
+
+    .cuenta-tarjeta {
+        padding: 5px 20px 5px 20px;
+        display: flex;
+    }
+
+    .fotos-bebes {
+        display: flex;
+        justify-content: center;
+    }
+
+    .foto-bebe {
+        width: 5.5rem;
+        height: 5.5rem;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    }
+
+    .foto-bebe img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #qrCode{
+        width: 8.5rem;
+        height: 8.5rem;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
